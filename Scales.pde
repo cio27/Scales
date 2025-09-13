@@ -1,11 +1,25 @@
 void setup() {
-  size(500, 500);  //feel free to change the size
-  noLoop(); //stops the draw() function from repeating
+ size (400, 400);
 }
 void draw() {
-  //your code here
+  for (int y=400; y>=-400; y = y-20) {
+    for (int x = 400; x>=-400; x = x-20) {
+      scale(x,y);
+    }
+  }
 }
 void scale(int x, int y) {
-  //your code here
+
+  int diam = 0;
+float r = 255;
+noFill();
+while(diam < 30){
+  stroke(100,r,r);
+  ellipse(y+20,x+20,diam,diam);
+  diam++;
+  r-=255/30.0;
+
+  
+}
 }
 
